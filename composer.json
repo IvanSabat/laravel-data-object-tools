@@ -1,0 +1,61 @@
+{
+    "name": "ivansabat/laravel-data-object-tools",
+    "description": "A set of tools to make working with Data Transfer Objects easier in Laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "IvanSabat\\LaravelDataObjectTools\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ivan Sabat",
+            "email": "ivan.sabat@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2",
+        "eventsauce/object-hydrator": "^0.4.3",
+        "illuminate/contracts": "^9.22|^10.0|^11.0",
+        "illuminate/support": "^9.22|^10.0|^11.0"
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest",
+        "fix": "./vendor/bin/pint",
+        "check": "./vendor/bin/pint --test -v",
+        "static": "./vendor/bin/phpstan analyse",
+        "all": [
+            "@test",
+            "@fix",
+            "@check",
+            "@static"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IvanSabat\\DataObjects\\Providers\\PackageServiceProvider"
+            ],
+            "aliases": [
+                "IvanSabat\\DataObjects\\Facades\\Hydrator"
+            ]
+        }
+    },
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "laravel/pint": "^1.1",
+        "orchestra/testbench": "^7.6",
+        "pestphp/pest": "^1.21",
+        "phpstan/phpstan": "^1.8"
+    }
+}

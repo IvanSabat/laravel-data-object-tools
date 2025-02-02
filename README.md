@@ -1,2 +1,14 @@
-# laravel-data-object-tools
-A set of tools to make working with Data Transfer Objects easier in Laravel
+# Tutorial
+From [here](https://laravel-news.com/building-your-own-laravel-packages).
+
+## Installation
+
+```bash
+composer require ivansabat/laravel-data-object-tools
+```
+
+## Usage
+
+```bash
+php artisan make:dto MyDto
+```
