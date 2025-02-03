@@ -2,24 +2,42 @@
     "name": "ivansabat/laravel-data-object-tools",
     "description": "A set of tools to make working with Data Transfer Objects easier in Laravel",
     "type": "library",
+    "keywords": [
+        "php",
+        "laravel",
+        "Open Source",
+        "DTO"
+      ],
+    "homepage": "https://github.com/IvanSabat/laravel-data-object-tools",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "IvanSabat\\LaravelDataObjectTools\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Ivan Sabat",
             "email": "ivan.sabat@outlook.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+          "IvanSabat\\DataObjects\\": "src/"
+        }
+      },
+      "autoload-dev": {
+        "psr-4": {
+          "IvanSabat\\DataObjects\\Tests\\": "tests/"
+        }
+      },
     "minimum-stability": "dev",
     "require": {
         "php": "^8.2",
         "eventsauce/object-hydrator": "^0.4.3",
         "illuminate/contracts": "^9.22|^10.0|^11.0",
         "illuminate/support": "^9.22|^10.0|^11.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.1",
+        "orchestra/testbench": "^7.6",
+        "pestphp/pest": "^1.21",
+        "phpstan/phpstan": "^1.8"
     },
     "scripts": {
         "test": "./vendor/bin/pest",
@@ -51,11 +69,5 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
-    },
-    "require-dev": {
-        "laravel/pint": "^1.1",
-        "orchestra/testbench": "^7.6",
-        "pestphp/pest": "^1.21",
-        "phpstan/phpstan": "^1.8"
     }
 }
